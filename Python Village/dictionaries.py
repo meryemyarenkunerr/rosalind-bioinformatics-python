@@ -1,4 +1,10 @@
-string = open('data/python-village/rosalind_ini6.txt', 'r').read().split()
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_ini6.txt'
+
+with open(DATA_FILE, 'r') as f:
+	string = f.read().split()
 
 _dict = dict()
 

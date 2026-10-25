@@ -1,4 +1,10 @@
-dna = open('data/bioinformatics-stronghold/rosalind_revc.txt').read()
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_revc.txt'
+
+with open(DATA_FILE, 'r') as f:
+	dna = f.readline().rstrip()
 
 reverse_complement = ''
 for i in range(len(dna) - 1, -1, -1):

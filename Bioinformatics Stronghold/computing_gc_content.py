@@ -1,4 +1,9 @@
-with open('data/bioinformatics-stronghold/rosalind_gc.txt', 'r') as f:
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_gc.txt'
+
+with open(DATA_FILE, 'r') as f:
 	headers = []
 	data = []
 	line = f.readline().rstrip()

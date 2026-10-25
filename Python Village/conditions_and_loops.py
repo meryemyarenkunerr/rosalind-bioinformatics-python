@@ -1,4 +1,10 @@
-a, b = open('data/python-village/rosalind_ini4.txt', 'r').read().split()
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_ini4.txt'
+
+with open(DATA_FILE, 'r') as f:
+	a, b = f.read().split()
 
 a, b = int(a), int(b)
 

@@ -1,4 +1,9 @@
-with open('data/bioinformatics-stronghold/rosalind_hamm.txt', 'r') as f:
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_hamm.txt'
+
+with open(DATA_FILE, 'r') as f:
 	s = f.readline().rstrip()
 	t = f.readline().rstrip()
 

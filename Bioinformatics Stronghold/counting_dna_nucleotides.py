@@ -1,4 +1,10 @@
-data = open('data/bioinformatics-stronghold/rosalind_dna.txt', 'r').read().rstrip()
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_revc.txt'
+
+with open(DATA_FILE, 'r') as f:
+	data = f.read().rstrip()
 
 count_dict = dict()
 

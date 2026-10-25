@@ -1,4 +1,9 @@
-dna = open('data/bioinformatics-stronghold/rosalind_rna.txt', 'r').read().strip()
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_rna.txt'
+
+dna = open(DATA_FILE, 'r').read().strip()
 
 rna = ''
 for i in dna:

@@ -1,4 +1,9 @@
-with open('data/python-village/rosalind_ini3.txt', 'r') as file:
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_ini3.txt'
+
+with open(DATA_FILE, 'r') as file:
 	text = file.readline().rstrip()
 	a, b, c, d = file.readline().split()
 

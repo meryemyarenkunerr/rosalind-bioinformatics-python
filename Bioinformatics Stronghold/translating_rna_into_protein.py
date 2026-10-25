@@ -1,3 +1,8 @@
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_prot.txt'
+
 codon_dict = {'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L',
 			  'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
 			  'AUU': 'I', 'AUC': 'I', 'AUA': 'I', 'AUG': 'M',
@@ -16,7 +21,7 @@ codon_dict = {'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L',
 			  'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
 }
 
-with open('data/rosalind_prot.txt', 'r') as f:
+with open(DATA_FILE, 'r') as f:
 	rna = f.read().rstrip()
 
 codons = [rna[i:i + 3] for i in range(0, len(rna), 3)]

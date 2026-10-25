@@ -1,3 +1,8 @@
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_iprb.txt'
+
 def factorial(number):
 	result = 1
 	for i in range(1, number + 1):
@@ -22,7 +27,7 @@ def probability(k, m , n):
 	return 1 - (((recessive_couples) + (heterozygous_couples * 0.25) + (cross_couples * 0.5)) / (total_couples))
 
 
-with open('data/bioinformatics-stronghold/rosalind_iprb.txt', 'r') as f:
+with open(DATA_FILE, 'r') as f:
 	k, m, n = map(int, f.read().rstrip().split())
 
 print(f'{probability(k, m ,n):.5f}')

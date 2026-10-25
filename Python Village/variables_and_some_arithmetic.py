@@ -1,7 +1,9 @@
-data = open('data/python-village/rosalind_ini2.txt', 'r')
-a, b = data.read().split()
+from pathlib import Path
 
-a = int(a)
-b = int(b)
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_ini2.txt'
+
+with open(DATA_FILE, 'r') as f:
+	a, b = map(int, f.read().split())
 
 print(a**2 + b**2)

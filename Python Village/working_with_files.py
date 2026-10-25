@@ -1,6 +1,10 @@
-even_lines = []
+from pathlib import Path
 
-with open('data/python-village/rosalind_ini5.txt', 'r') as f:
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_ini5.txt'
+
+even_lines = []
+with open(DATA_FILE, 'r') as f:
 	while True:
 		f.readline()
 		even_line = f.readline().rstrip()
