@@ -1,7 +1,7 @@
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_test.txt'
+DATA_FILE = SCRIPT_DIR / 'data' / 'rosalind_subs.txt'
 
 def finding_occurences_naive(s, t):
 	occurences = []
@@ -9,7 +9,7 @@ def finding_occurences_naive(s, t):
 
 	for i in range(len_s - len_t + 1):
 		match = True
-		for j in range(len_s):
+		for j in range(len_t):
 			if s[i + j] != t[j]:
 				match = False
 				break
@@ -25,4 +25,3 @@ with open(DATA_FILE, 'r') as f:
 result = finding_occurences_naive(s, t)
 for i in result:
 	print(i, end= ' ')
-
