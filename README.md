@@ -12,11 +12,25 @@ The solutions are organized by topic and problem sets, focusing on clean code, c
 .
 ├── Bioinformatics Stronghold/
 │   ├── data/
+│   ├── calculating_expected_offspring.py
+│   ├── calculating_protein_mass.py
 │   ├── complementing_a_strand_of_dna.py
 │   ├── computing_gc_content.py
+│   ├── consensus_and_profile.py
+│   ├── counting_dna_nucleotides.py
 │   ├── counting_point_mutations.py
+│   ├── enumerating_gene_orders.py
+│   ├── finding_a_motif_in_dna.py
+│   ├── finding_a_protein_motif.py
+│   ├── finding_a_shared_motif.py
+│   ├── independent_alleles.py
+│   ├── inferring_mrna_deom_protein.py
 │   ├── mendels_first_law.py
+│   ├── mortal_fibonacci_rabbits.py
+│   ├── open_reading_frames.py
+│   ├── overlap_graphs.py
 │   ├── rabbits_and_recurrence_relations.py
+│   ├── rna_splicing.py
 │   ├── transcribing_dna_into_rna.py
 │   └── translating_rna_into_protein.py
 ├── Python Village/
